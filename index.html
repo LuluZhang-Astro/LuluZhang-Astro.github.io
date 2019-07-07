@@ -179,6 +179,16 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/storyright</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/storywidth</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth</li>
+
 <li>$:/view</li>
 
 <li>GettingStarted</li>
@@ -9821,6 +9831,21 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20190707123246275" modified="20190707123247401" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>950px</pre>
+</div>
+<div created="20190707123151193" modified="20190707123158908" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>350px</pre>
+</div>
+<div created="20190707123048820" modified="20190707123220092" title="$:/themes/tiddlywiki/vanilla/metrics/storyright" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>1000px</pre>
+</div>
+<div created="20190707123056890" modified="20190707123228664" title="$:/themes/tiddlywiki/vanilla/metrics/storywidth" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>950px</pre>
+</div>
+<div created="20190707123106124" modified="20190707123210724" title="$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>950px</pre>
+</div>
 <div created="20190707075820121" modified="20190707080711322" title="$:/view" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>classic</pre>
 </div>
@@ -9839,73 +9864,74 @@ Before you can start storing important information in ~TiddlyWiki it is importan
 # Refresh the page in the browser to and verify that the new tiddler has been correctly saved
 </pre>
 </div>
-<div created="20190707065437936" modified="20190707084906797" tags="Journal" title="Measuring SFR within AGN" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<div created="20190707065437936" modified="20190707124644483" tags="Journal" title="Measuring SFR within AGN" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>The empirical correlations between the masses of central black holes and the properties of their host galaxies (e.g., Ferrarese &amp; Merritt 2000; Gebhardt et al. 2000; Kormendy &amp; Ho 2013) have led to the widely accepted idea that the growth of central black holes must be connected to galaxy evolution (e.g., Richstone et al. 1998; Ho 2004; Di Matteo et al. 2005; Bower et al. 2006; Fanidakis et al. 2011; Heckman &amp; Best 2014). Studying the growth of black holes and their host galaxies is the key to understanding this coevolution. From an observational point of view, one of the major challenges is to measure the star formation rate (SFR) of AGN host galaxies. 
 
 A number of methods to obtain precise SFRs have been developed for star-forming galaxies, including diagnostics involving the ultraviolet (UV) and infrared (IR) continuum, as well as emission-line strengths that trace the budget of ionizing photons from massive stars (see Kennicutt 1998 for a review). Unfortunately, none of these methods can be applied unambiguously to active galaxies. AGNs emit copious ionizing and high-energy photons across its broadband spectral energy distribution (SED), which greatly affect the ionization balance of the line-emitting gas exposed to it. This compromises most of the traditional SFR diagnostics, if not rendering them essentially useless. For instance, photoionization by a central AGN source produces strong hydrogen recombination lines (e.g., Hα) and forbidden lines (e.g., [O II] λ3727). In extreme cases, the narrow-line region (NLR) of the AGN can occupy the entire extent of the host galaxy (Greene et al. 2011). Dust grains, on circumnuclear (torus) scales and beyond, absorb and reprocess high-energy photons from the nucleus, generating thermal radiation across a broad IR spectrum.
 
-People classify AGNs into two categories: unobscured (type 1) and obscured (type 2) AGNs. Examples of typical SEDs for star-forming galaxies and two types of AGNs are shown in Figure X. In star-forming galaxies, all SFR calibrations are applicable. In type 2 AGNs, emission line fluxes from star formation are contaminated by those from NLR which are photoionized by photons from AGNs. The AGN torus can reprocess UV/optical photons from AGNs and then emit emissions at the IR wavelength. Fortunately, the UV/optical continuum in type 2 AGNs has little contribution from central engine owing to the obscuration of torus. While type 1 AGNs contaminate nearly all electromagnetic spectrum, making it the most difficult case to deal with.
+People classify AGNs into two categories: unobscured (type 1) and obscured (type 2) AGNs. Examples of typical SEDs for star-forming galaxies and two types of AGNs are shown as below. In star-forming galaxies, all SFR calibrations are applicable. In type 2 AGNs, emission line fluxes from star formation are contaminated by those from NLR which are photoionized by photons from AGNs. The AGN torus can reprocess UV/optical photons from AGNs and then emit emissions at the IR wavelength. Fortunately, the UV/optical continuum in type 2 AGNs has little contribution from central engine owing to the obscuration of torus. While type 1 AGNs contaminate nearly all electromagnetic spectrum, making it the most difficult case to deal with.
 
 [img[Picture.png]]
 
 In AGNs there are mainly three types of methods to estimate SFRs: D4000-based SFRs for type 2 AGNs, SED-based and emission line-based SFRs for both type 1 and type 2 AGNs.
 
-# The break occurring at 4000 Å (D4000) is the strongest discontinuity in the optical spectrum of a galaxy and arises because of the accumulation of a large number of spectral lines in a narrow wavelength region. The main contribution to the opacity comes from ionized metals. In hot stars, the elements are multiply ionized and the opacity decreases, so the D4000 will be small for young stellar populations and large for old, metal-rich galaxies (Kauffmann et al. 2003). Based on relation between specific SFR (SFR over stellar mass M*; sSFR≡SFR/M*) established for star-forming galaxies, Brinchmann et al. (2004) estimated the SFRs for AGN host galaxies inside Sloan Digital Sky Survey (SDSS; York et al. 2000) 3′′-diameter fiber. 
+# The break occurring at 4000 Å (D4000) is the strongest discontinuity in the optical spectrum of a galaxy and arises because of the accumulation of a large number of spectral lines in a narrow wavelength region. The main contribution to the opacity comes from ionized metals. In hot stars, the elements are multiply ionized and the opacity decreases, so the D4000 will be small for young stellar populations and large for old, metal-rich galaxies (Kauffmann et al. 2003). Based on relation between specific SFR (SFR over stellar mass M,,*,,; sSFR≡SFR/M,,*,,) established for star-forming galaxies, Brinchmann et al. (2004) estimated the SFRs for AGN host galaxies inside Sloan Digital Sky Survey (SDSS; York et al. 2000) 3′′-diameter fiber. 
 # Spectral energy distribution (SED) constructed from multi-wavelength observations can provide information on galaxy properties, such as stellar mass, stellar population history, ionization pattern and AGN activity, etc. Fitting the observed broad band photometry data from UV to IR combining different templates (theoretical/empirical, including AGN templates) accounting different physical components is now widely used (e.g., Conroy et al. 2013 for a review). CIGALE (Noll et al. 2009) is one of the most popular SED-fitting code, which can fit the SED from UV to sub-mm and take energy conservation into account, i.e. the energy absorbed by dust in UV/optical is re-emitted in the IR. 
-# Although observed integrated emission lines are combination of both AGN and star formation contributions, the differences in shape of ionizing photon spectra and flux densities make it possible to separate them. Baldwin, Philips &amp; Terlevich (1981; BPT) diagrams are often used to quantify the dominant ionizing mechanism. Based on BPT diagrams, Davies et al. (2014b) used interpolation between HII and AGN mixing sequence in spatially-resolved objects to estimate the AGN contribution. In Davies et al. (2016), they used BPT diagram to select the basis spectra for pure AGN and star formation and used linear combination to estimate AGN fraction. Observed empirical ratios have also been used to estimate the AGN contributions. Silverman et al. (2009) used a mean [O II]/[O III] ratio of type 1 SDSS AGNs with log L[O III] &gt; 41.5 erg s-1, and Pereira-Santaella et al. (2010) used the observed value of [Ne III]/[O IV] at high [O IV] luminosity. Photoionization models (e.g., CLOUDY; Ferland et al. 2017, MAPPINGS; Sutherland &amp; Dopita 2017) are also efficient tools to study the ionization structure produced either by an AGN or a population of stars. Attempts have been made considering combination of both AGN and starburst as ionizing sources to model the observed line ratios (spatially-resolved case: Davies et al. 2014a, integrated case: Thomas et al. 2018) and hence estimate the AGN contribution. 
+# Although observed integrated emission lines are combination of both AGN and star formation contributions, the differences in shape of ionizing photon spectra and flux densities make it possible to separate them. Baldwin, Philips &amp; Terlevich (1981; BPT) diagrams are often used to quantify the dominant ionizing mechanism. Based on BPT diagrams, Davies et al. (2014b) used interpolation between HII and AGN mixing sequence in spatially-resolved objects to estimate the AGN contribution. In Davies et al. (2016), they used BPT diagram to select the basis spectra for pure AGN and star formation and used linear combination to estimate AGN fraction. Observed empirical ratios have also been used to estimate the AGN contributions. Silverman et al. (2009) used a mean [O II]/[O III] ratio of type 1 SDSS AGNs with log L[O III] &gt; 41.5 erg s^^-1^^, and Pereira-Santaella et al. (2010) used the observed value of [Ne III]/[O IV] at high [O IV] luminosity. Photoionization models (e.g., CLOUDY; Ferland et al. 2017, MAPPINGS; Sutherland &amp; Dopita 2017) are also efficient tools to study the ionization structure produced either by an AGN or a population of stars. Attempts have been made considering combination of both AGN and starburst as ionizing sources to model the observed line ratios (spatially-resolved case: Davies et al. 2014a, integrated case: Thomas et al. 2018) and hence estimate the AGN contribution. 
 # Recently, Zhuang et al. (2019a) used a new set of photoionization calculations with realistic AGN spectral energy distributions and input assumptions to constrain the magnitude of [Ne II] and [Ne III] produced by the NLR for a given strength of [Ne V] 14.32 μm. They demonstrated that AGNs emit a relatively restricted range of [Ne II]/[Ne V] and [Ne III]/[Ne V] ratios. Hence, once [Ne V] is measured, the AGN contribution to the low-ionization Ne lines can be estimated, and the SFR can be determined from the strength of [Ne II] and [Ne III]. They updated the calibration of [Ne II] and [Ne III] strength as an SFR indicator, explicitly considering the effects of metallicity, finding very good relations between Ne fractional abundances and the [Ne III]/[Ne II] ratio for different metallicities, ionization parameters, and starburst ages. Comparison of neon-based SFRs with independent SFRs for active and star-forming galaxies shows excellent consistency with small scatter (∼0.18 dex). Zhuang et al. (2019b) recalibrated a metallicity-dependent SFR estimator based on [O II] for both active and inactive galaxies using a large sample from SDSS DR7. For AGNs, they used radiation pressure-dominated photoionization models, identical to Zhuang et al. (2019a). The SFRs for AGNs using [O II] are consistent to those from D4000 method. 
 
 ''References:''
-Baldwin, J. A., Phillips, M. M., &amp; Terlevich, R. 1981, PASP, 93, 5 
-
-Bower, R. G., Benson, A. J., Malbon, R., et al. 2006, MNRAS, 370, 645 
-
-Brinchmann, J., Charlot, S., White, S. D. M., et al. 2004, MNRAS, 351, 1151
-
-Davies, R. L., Kewley, L. J., Ho, I.-T., &amp; Dopita, M. A. 2014a, MNRAS, 444, 3961 
-
-Davies, R. L., Rich, J. A., Kewley, L. J., &amp; Dopita, M. A. 2014b, MNRAS, 439, 3835 
-
-Davies, R. L., Groves, B., Kewley, L. J., et al. 2016, MNRAS, 462, 1616
-
-Di Matteo, T., Springel, V., &amp; Hernquist, L. 2005, Nature, 433, 604 
-
-Fanidakis, N., Baugh, C. M., Benson, A. J., et al. 2011, MNRAS, 410, 53 
 
 
-Ferland, G. J., Chatzikos, M., Guzman, F., et al. 2017, ~RMxAA, 53, 385 
+[[Baldwin, J. A., Phillips, M. M., &amp; Terlevich, R. 1981, PASP, 93, 5|https://iopscience.iop.org/article/10.1086/130766]]
 
-Ferrarese, L., &amp; Merritt, D. 2000, ~ApJL, 539, L9
+[[Bower, R. G., Benson, A. J., Malbon, R., et al. 2006, MNRAS, 370, 645|https://doi.org/10.1111/j.1365-2966.2006.10519.x]]
 
-Gebhardt, K., Bender, R., Bower, G., et al. 2000, ~ApJL, 539, L13 
+[[Brinchmann, J., Charlot, S., White, S. D. M., et al. 2004, MNRAS, 351, 1151|https://doi.org/10.1111/j.1365-2966.2004.07881.x]]
 
-Greene, J. E., Zakamska, N. L., Ho, L. C., &amp; Barth, A. J. 2011, ~ApJ, 732, 9 
+[[Davies, R. L., Kewley, L. J., Ho, I.-T., &amp; Dopita, M. A. 2014a, MNRAS, 444, 3961|https://academic.oup.com/mnras/article/444/4/3961/1030865]]
 
-Heckman, T. M., &amp; Best, P. N. 2014, ARA&amp;A, 52, 589 
+[[Davies, R. L., Rich, J. A., Kewley, L. J., &amp; Dopita, M. A. 2014b, MNRAS, 439, 3835|https://academic.oup.com/mnras/article/439/4/3835/1168467]]
 
-Ho, L. 2004, Carnegie Observatories Astrophysics 4 Volume Hardback Set (Cambridge: Cambridge Univ. Press) 
+[[Davies, R. L., Groves, B., Kewley, L. J., et al. 2016, MNRAS, 462, 1616|https://doi.org/10.1093/mnras/stw1754]]
 
-Kauffmann, G., Heckman, T. M., White, S. D. M., et al. 2003, MNRAS, 341, 33
+[[Di Matteo, T., Springel, V., &amp; Hernquist, L. 2005, Nature, 433, 604|https://doi.org/10.1038/nature03335]]
 
-Kennicutt, R. C., Jr. 1998, ARA&amp;A, 36, 189
+[[Fanidakis, N., Baugh, C. M., Benson, A. J., et al. 2011, MNRAS, 410, 53|https://doi.org/10.1111/j.1365-2966.2010.17427.x]]
 
-Kormendy, J., &amp; Ho, L. C. 2013, ARA&amp;A, 51, 511
+[[Ferland, G. J., Chatzikos, M., Guzman, F., et al. 2017, ~RMxAA, 53, 385|http://adsabs.harvard.edu/abs/2017RMxAA..53..385F]]
 
-Noll, S., Burgarella, D., Giovannoli, E., et al. 2009, A&amp;A, 507, 1793
+[[Ferrarese, L., &amp; Merritt, D. 2000, ~ApJL, 539, L9|https://doi.org/10.1086/312838]]
 
-Pereira-Santaella, M., Diamond-Stanic, A. M., Alonso-Herrero, A., &amp; Rieke, G. H. 2010, ~ApJ, 725, 2270
+[[Gebhardt, K., Bender, R., Bower, G., et al. 2000, ~ApJL, 539, L13|https://doi.org/10.1086/312840]]
 
-Richstone, D., Ajhar, E. A., Bender, R., et al. 1998, Nature, 395, A14
+[[Greene, J. E., Zakamska, N. L., Ho, L. C., &amp; Barth, A. J. 2011, ~ApJ, 732, 9|https://doi.org/10.1088/0004-637X/732/1/9]]
 
-Sutherland, R. S., &amp; Dopita, M. A. 2017, ~ApJS, 229, 34
+[[Heckman, T. M., &amp; Best, P. N. 2014, ARA&amp;A, 52, 589|https://www.annualreviews.org/doi/full/10.1146/annurev-astro-081913-035722]]
 
-Silverman, J. D., Lamareille, F., Maier, C., et al. 2009, ~ApJ, 696, 396
+[[Ho, L. 2004, Carnegie Observatories Astrophysics 4 Volume Hardback Set (Cambridge: Cambridge Univ. Press)|http://adsabs.harvard.edu/abs/2004coa..book.....H]]
 
-Thomas, A. D., Kewley, L. J., Dopita, M. A., et al. 2018b, ~ApJL, 861, L2
+[[Kauffmann, G., Heckman, T. M., White, S. D. M., et al. 2003, MNRAS, 341, 33|https://doi.org/10.1046/j.1365-8711.2003.06291.x]]
 
-York, D. G., Adelman, J., Anderson, Jr., J. E., et al. 2000, AJ, 120, 1579
+[[Kennicutt, R. C., Jr. 1998, ARA&amp;A, 36, 189|https://doi.org/10.1146/annurev.astro.36.1.189]]
 
-Zhuang, M.-Y., Ho, L. C., &amp; Shangguan, J. 2019a, ~ApJ, 873, 103
+[[Kormendy, J., &amp; Ho, L. C. 2013, ARA&amp;A, 51, 511|https://doi.org/10.1146/annurev-astro-082708-101811]]
+
+[[Noll, S., Burgarella, D., Giovannoli, E., et al. 2009, A&amp;A, 507, 1793|https://www.aanda.org/articles/aa/abs/2009/45/aa12497-09/aa12497-09.html]]
+
+[[Pereira-Santaella, M., Diamond-Stanic, A. M., Alonso-Herrero, A., &amp; Rieke, G. H. 2010, ~ApJ, 725, 2270|https://iopscience.iop.org/article/10.1088/0004-637X/725/2/2270/meta]]
+
+[[Richstone, D., Ajhar, E. A., Bender, R., et al. 1998, Nature, 395, A14|http://adsabs.harvard.edu/abs/1998Natur.395A..14R]]
+
+[[Sutherland, R. S., &amp; Dopita, M. A. 2017, ~ApJS, 229, 34|https://doi.org/10.3847/1538-4365/aa6541]]
+
+[[Silverman, J. D., Lamareille, F., Maier, C., et al. 2009, ~ApJ, 696, 396|https://doi.org/10.1088/0004-637X/696/1/396]]
+
+[[Thomas, A. D., Kewley, L. J., Dopita, M. A., et al. 2018b, ~ApJ, 861, L2|https://ui.adsabs.harvard.edu/link_gateway/2018ApJ...861L...2T/doi:10.3847/2041-8213/aacce7]]
+
+[[York, D. G., Adelman, J., Anderson, Jr., J. E., et al. 2000, AJ, 120, 1579|https://doi.org/10.1086/301513]]
+
+[[Zhuang, M.-Y., Ho, L. C., &amp; Shangguan, J. 2019a, ~ApJ, 873, 103|https://ui.adsabs.harvard.edu/link_gateway/2019ApJ...873..103Z/doi:10.3847/1538-4357/ab0650]]
 
 Zhuang, M.-Y. &amp; Ho, L. C. 2019b, ~ApJ submitted </pre>
 </div>
